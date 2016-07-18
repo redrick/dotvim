@@ -149,6 +149,12 @@ NeoBundle 'mattn/webapi-vim'
 "NeoBundle 'tpope/vim-unimpaired'
 "NeoBundle 'reinh/vim-makegreen'
 
+" Vim Filesearch
+NeoBundle 'jeetsukumaran/vim-filesearch'
+
+" Vim Railscasts theme
+NeoBundle 'jpo/vim-railscasts-theme'
+
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',

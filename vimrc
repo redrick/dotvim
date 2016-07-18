@@ -9,6 +9,9 @@ end
 
 source ~/.vim/before.vim   " local BEFORE configs
 
+colorscheme railscasts
+
+set clipboard=unnamedplus
 " after.vim is loaded from ./after/plugin/after.vim
 " which should place it AFTER all the other plugins in the loading order
 " bindings.vim and local.vim are loaded from after.vim
