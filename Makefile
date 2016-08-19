@@ -33,7 +33,7 @@ ${NEOBUNDLE}:
 .PHONY: cleanup compile-command-t compile
 
 cleanup:
-	vim -u bundles.vim +NeoBundleClean +NeoBundleCheck +NeoBundleDocs
+	vim -u bundles.vim +NeoBundleCheck +NeoBundleDocs
 
 compile-command-t:
 	test ! -d bundle/Command-T || (cd bundle/Command-T/ruby/command-t/ && $(RUBY) extconf.rb && make)
