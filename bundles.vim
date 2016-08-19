@@ -155,6 +155,9 @@ NeoBundle 'jeetsukumaran/vim-filesearch'
 " Vim Railscasts theme
 NeoBundle 'jpo/vim-railscasts-theme'
 
+" Vim testing made easy
+NeoBundle 'janko-m/vim-test'
+
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
@@ -167,6 +170,18 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+" Vim Filesearch
+NeoBundle 'jeetsukumaran/vim-filesearch'
+
+" Vim railscasts theme :)
+NeoBundle 'jgdavey/vim-railscasts'
+
+" For commenting out blocks
+NeoBundle 'tomtom/tcomment_vim'
+
+" New JS ES6 snippets and syntax Highlighting
+NeoBundle 'isRuslan/vim-es6'
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles

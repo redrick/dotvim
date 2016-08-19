@@ -9,3 +9,8 @@ let @s="S*gvS*"
 
 " 'q' format paragraph
 let @q="V}kQ"
+
+" ident
+" http://lucapette.com/vim/rails/vim-for-rails-developers-indenting-code/
+map   <silent> <F5> mmgg=G`m^
+imap  <silent> <F5> <Esc> mmgg=G`m^
