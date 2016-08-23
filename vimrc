@@ -28,3 +28,9 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+nmap          <C-W>+     <C-W>+<SID>ws
+nmap          <C-W>-     <C-W>-<SID>ws
+nn <script>   <SID>ws+   <C-W>+<SID>ws
+nn <script>   <SID>ws-   <C-W>-<SID>ws
+nmap          <SID>ws    <Nop>
