@@ -33,6 +33,10 @@ nmap          <C-W>+     <C-W>+<SID>ws
 nmap          <C-W>-     <C-W>-<SID>ws
 nn <script>   <SID>ws+   <C-W>+<SID>ws
 nn <script>   <SID>ws-   <C-W>-<SID>ws
+nmap          <C-W>>     <C-W>><SID>ws
+nmap          <C-W><     <C-W><<SID>ws
+nn <script>   <SID>ws>   <C-W>><SID>ws
+nn <script>   <SID>ws<   <C-W><<SID>ws
 nmap          <SID>ws    <Nop>
 
 " The Silver Searcher
