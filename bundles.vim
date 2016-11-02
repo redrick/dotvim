@@ -183,6 +183,9 @@ NeoBundle 'tomtom/tcomment_vim'
 " New JS ES6 snippets and syntax Highlighting
 NeoBundle 'isRuslan/vim-es6'
 
+" Elm programming language
+NeoBundle 'lambdatoast/elm.vim'
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
