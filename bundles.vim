@@ -186,6 +186,9 @@ NeoBundle 'isRuslan/vim-es6'
 " RI documentation bindings for vim
 NeoBundle 'danchoi/ri.vim'
 
+" Elm programming language
+NeoBundle 'lambdatoast/elm.vim'
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
