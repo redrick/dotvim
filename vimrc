@@ -61,3 +61,17 @@ nnoremap \ :Ag<SPACE>
 
 " Reveal current file in tree
 nmap ,f :NERDTreeFind<CR>
+
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
+
+nnoremap  ,zs :call ri#OpenSearchPrompt(0)<cr> " horizontal split
+nnoremap  ,zv :call ri#OpenSearchPrompt(1)<cr> " vertical split
+nnoremap  ,zk :call ri#LookupNameUnderCursor()<cr> " keyword lookup"
