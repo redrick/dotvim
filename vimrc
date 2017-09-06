@@ -75,3 +75,6 @@ endfunction
 nnoremap  ,zs :call ri#OpenSearchPrompt(0)<cr> " horizontal split
 nnoremap  ,zv :call ri#OpenSearchPrompt(1)<cr> " vertical split
 nnoremap  ,zk :call ri#LookupNameUnderCursor()<cr> " keyword lookup"
+
+set shiftwidth=2
+set tabstop=2
