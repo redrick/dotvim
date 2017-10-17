@@ -23,6 +23,9 @@ au BufRead,BufNewFile *.es6 set filetype=javascript
 " make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
 
+" Remove default ri.vim key mappings
+let g:ri_no_mappings=1
+
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
@@ -51,14 +54,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" bind K to grep word under cursor
-nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" bind \ (backward slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-
-nnoremap \ :Ag<SPACE>
-
 " Reveal current file in tree
 nmap ,f :NERDTreeFind<CR>
 
@@ -72,6 +67,18 @@ function! QuickfixFilenames()
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
+" New ri.vim key mappings
 nnoremap  ,zs :call ri#OpenSearchPrompt(0)<cr> " horizontal split
 nnoremap  ,zv :call ri#OpenSearchPrompt(1)<cr> " vertical split
 nnoremap  ,zk :call ri#LookupNameUnderCursor()<cr> " keyword lookup"
+
+" bind K to grep word under cursor
+nnoremap KK :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" bind \ (backward slash) to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+nnoremap \ :Ag<SPACE>
+
+"Remove all trailing whitespace by pressing F5
+nnoremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
