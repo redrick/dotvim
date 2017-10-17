@@ -82,3 +82,6 @@ nnoremap \ :Ag<SPACE>
 
 "Remove all trailing whitespace by pressing F5
 nnoremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+set shiftwidth=2
+set tabstop=2
