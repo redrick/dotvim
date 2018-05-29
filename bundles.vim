@@ -14,14 +14,22 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 " file tree and tabs interaction
 NeoBundle 'jistr/vim-nerdtree-tabs'
+" commenting
+NeoBundle 'scrooloose/nerdcommenter'
 " fuzzy file open
 NeoBundle 'kien/ctrlp.vim'
+" popup completion menu
+NeoBundle 'AutoComplPop'
 " tags list navigation
 NeoBundle 'taglist.vim'
+" yank history
+NeoBundle 'YankRing.vim'
 " git integration
 NeoBundle 'tpope/vim-fugitive'
 " syntax checking on save
 NeoBundle 'scrooloose/syntastic'
+" TextMate-style snippets
+NeoBundle 'msanders/snipmate.vim'
 " manipulation of surraunding parens, quotes, etc.
 NeoBundle 'tpope/vim-surround'
 " vertical alignment tool
@@ -37,12 +45,16 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 " plugin for resolving three-way merge conflicts
 NeoBundle 'sjl/splice.vim'
+" plugin for visually displaying indent levels
+NeoBundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
 NeoBundle 'tpope/vim-endwise'
 " automatic closing of quotes, parenthesis, brackets, etc.
 NeoBundle 'Raimondi/delimitMate'
 " calendar, duh!
 NeoBundle 'calendar.vim--Matsumoto'
+" A Narrow Region Plugin (similar to Emacs)
+"NeoBundle 'chrisbra/NrrwRgn'
 " url based hyperlinks for text files
 NeoBundle 'utl.vim'
 " A clone of Emacs' Org-mode for Vim
@@ -59,6 +71,8 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'mattn/emmet-vim'
 " editorconfig.org support
 NeoBundle 'editorconfig/editorconfig-vim'
+" tmux + vim = love
+NeoBundle 'christoomey/vim-tmux-navigator'
 
 " Ruby/Rails
 
@@ -66,6 +80,8 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'tpope/vim-rails'
 " bundler integration (e.g. :Bopen)
 NeoBundle 'tpope/vim-bundler'
+" rake integration
+NeoBundle 'tpope/vim-rake'
 " A custom text object for selecting ruby blocks (ar/ir)
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 " ruby refactoring
@@ -79,18 +95,40 @@ NeoBundle 'josemarluedke/vim-rspec'
 " i18n extraction plugin
 NeoBundle 'stefanoverna/vim-i18n'
 
+" color themes
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tpope/vim-vividchalk'
+NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
 " syntax support
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tsaleh/vim-tmux'
+NeoBundle 'Puppet-Syntax-Highlighting'
 NeoBundle 'JSON.vim'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'vitaly/vim-syntastic-coffee'
 NeoBundle 'vim-scripts/jade.vim'
+NeoBundle 'wavded/vim-stylus'
+NeoBundle 'slim-template/vim-slim'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'mtscout6/vim-cjsx'
+NeoBundle 'vitaly/vim-literate-coffeescript'
+NeoBundle 'rust-lang/rust', {'rtp': 'src/etc/vim/'}
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
+
+" clojure
+"NeoBundle 'VimClojure'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'kien/rainbow_parentheses.vim'
 
 " Support and minor
 
@@ -107,6 +145,10 @@ NeoBundle 'mattn/gist-vim'
 " web APIs support
 NeoBundle 'mattn/webapi-vim'
 
+"NeoBundle 'ShowMarks'
+"NeoBundle 'tpope/vim-unimpaired'
+"NeoBundle 'reinh/vim-makegreen'
+
 " Vim Filesearch
 NeoBundle 'jeetsukumaran/vim-filesearch'
 
@@ -115,6 +157,19 @@ NeoBundle 'jpo/vim-railscasts-theme'
 
 " Vim testing made easy
 NeoBundle 'janko-m/vim-test'
+
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'ujihisa/unite-colorscheme'
 
 " Vim Filesearch
 NeoBundle 'jeetsukumaran/vim-filesearch'
@@ -130,6 +185,13 @@ NeoBundle 'isRuslan/vim-es6'
 
 " RI documentation bindings for vim
 NeoBundle 'danchoi/ri.vim'
+
+" Elm programming language
+NeoBundle 'lambdatoast/elm.vim'
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 call neobundle#end()
 
