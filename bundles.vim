@@ -189,6 +189,10 @@ NeoBundle 'danchoi/ri.vim'
 " Elm programming language
 NeoBundle 'lambdatoast/elm.vim'
 
+" note taking in vim
+NeoBundle 'pedrosans/vim-notes'
+NeoBundle 'xolox/vim-misc'
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif

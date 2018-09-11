@@ -85,3 +85,5 @@ nnoremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 set shiftwidth=2
 set tabstop=2
+
+let g:notes_directories = ['~/Projects/notes/', '~/Projects/notes/Dennik/', '~/Projects/notes/Expert/', '~/Projects/notes/Bernard/']
