@@ -57,6 +57,9 @@ endif
 " Reveal current file in tree
 nmap ,f :NERDTreeFind<CR>
 
+" Golang bindings
+nmap ,x :GoRun<CR>
+
 command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
 function! QuickfixFilenames()
   " Building a hash ensures we get each buffer only once
@@ -88,3 +91,8 @@ set tabstop=2
 
 set re=1
 set redrawtime=10000
+
+set hidden
+filetype plugin on
+
+set wrap linebreak nolist

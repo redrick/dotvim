@@ -84,10 +84,8 @@ NeoBundle 'stefanoverna/vim-i18n'
 " syntax support
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'JSON.vim'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'pangloss/vim-javascript'
@@ -123,6 +121,21 @@ NeoBundle 'danchoi/ri.vim'
 
 " Elm programming language
 NeoBundle 'lambdatoast/elm.vim'
+
+" API blueprint highlighting
+NeoBundle 'kylef/apiblueprint.vim'
+
+" Lovely rest client in vim
+NeoBundle 'baverman/vial'
+NeoBundle 'baverman/vial-http'
+
+" Golang support for vim
+NeoBundle 'fatih/vim-go'
+" NeoBundle 'jodosha/vim-godebug'
+NeoBundle 'sebdah/vim-delve'
+
+" Lovely markdown extension
+NeoBundle 'gabrielelana/vim-markdown'
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
