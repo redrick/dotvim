@@ -80,6 +80,8 @@ NeoBundle 'vim-scripts/blockle.vim'
 NeoBundle 'josemarluedke/vim-rspec'
 " i18n extraction plugin
 NeoBundle 'stefanoverna/vim-i18n'
+" ruby linter
+NeoBundle 'ruby-formatter/rufo-vim'
 
 " syntax support
 NeoBundle 'vim-ruby/vim-ruby'
@@ -120,7 +122,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'danchoi/ri.vim'
 
 " Elm programming language
-NeoBundle 'lambdatoast/elm.vim'
+NeoBundle 'elmcast/elm-vim'
+NeoBundle 'sbdchd/neoformat'
 
 " API blueprint highlighting
 NeoBundle 'kylef/apiblueprint.vim'
@@ -133,9 +136,6 @@ NeoBundle 'baverman/vial-http'
 NeoBundle 'fatih/vim-go'
 " NeoBundle 'jodosha/vim-godebug'
 NeoBundle 'sebdah/vim-delve'
-
-" Lovely markdown extension
-NeoBundle 'gabrielelana/vim-markdown'
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles

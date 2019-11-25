@@ -96,3 +96,12 @@ set hidden
 filetype plugin on
 
 set wrap linebreak nolist
+
+" Enable rufo (RUby FOrmat)
+" let g:rufo_auto_formatting = 1
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre *.elm undojoin | Neoformat
+  autocmd BufWritePre *.rb undojoin | Neoformat
+augroup END
